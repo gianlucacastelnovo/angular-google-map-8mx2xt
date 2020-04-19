@@ -7,15 +7,21 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 
 import { AgmCoreModule } from '@agm/core';
-import { LocationComponent } from './location.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {  CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+import { AngularMaterialModule } from './angular-material.module';
+
+
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule,
-  AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCSIFuXPQXel1splGkx5ElXoU1bL60Jn-I'
-    })
-     ],
-  declarations: [ AppComponent, LocationComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [
+    BrowserAnimationsModule,
+    AngularMaterialModule,
+  ],
+  declarations: [ AppComponent ],
+  bootstrap:    [ AppComponent ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
